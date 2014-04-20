@@ -18,12 +18,12 @@ using namespace std;
 int main(){
 	int i,z,n,j,k,m,t,h;
 	int a,b,c,d;
-	int mat[10010][15];
+	int mat[20010][15];
 
 
 	scanf("%d %d %d",&n,&m,&k);
 
-	int ans[10010] = {0};
+	int ans[20010] = {0};
 	int chat_box_messages[11] = {0};
 
 
