@@ -18,13 +18,15 @@ int main(){
 	int a,b,c,d;
 	int n,m,min,max;
 	scanf("%d%d%d%d",&n,&m,&min,&max);
-	int a_min = 1000, a_max = 0; 
+	int a_min = 1000;
+	int a_max = -100; 
 	int a_temp;
+
 	for(i=0;i<m;i++){
 		scanf("%d",&a_temp);
 		if( a_temp < a_min )
 			a_min = a_temp;
-		else if( a_temp > a_max )
+		if( a_temp > a_max )
 			a_max = a_temp;
 	}
 
@@ -35,11 +37,19 @@ int main(){
 		if( a_max == max )
 			how_many_more_needed--;
 
-	if( (n-m) >= how_many_more_needed )
-		printf("Correct");
-	else
-		printf("Incorrect");
+	// if( (n-m) >= how_many_more_needed )
+	// 	printf("Correct");
+	// else
+	// 	printf("Incorrect");
 
+		// cout << "a_min " << a_min << " a_max" << a_max << endl;
+
+		if( (a_min < min) || (a_max > max) )
+			printf("Incorrect");
+		else if( (n-m) >= how_many_more_needed )
+			printf("Correct");
+		else
+			printf("Incorrect");
 	
  
 	return 0;
